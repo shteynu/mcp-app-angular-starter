@@ -1,0 +1,25 @@
+<main class="main">
+  <p class="notice">Watch activity in the DevTools console!</p>
+
+  <div class="action">
+    <p>
+      <strong>Server Time:</strong> <code class="server-time">{{ serverTime() }}</code>
+    </p>
+    <button type="button" (click)="handleGetTime()">Get Server Time</button>
+  </div>
+
+  <div class="action">
+    <textarea [(ngModel)]="messageText"></textarea>
+    <button type="button" (click)="handleSendMessage()">Send Message</button>
+  </div>
+
+  <div class="action">
+    <input type="text" [(ngModel)]="logText" />
+    <button type="button" (click)="handleSendLog()">Send Log</button>
+  </div>
+
+  <div class="action">
+    <input type="url" [(ngModel)]="linkUrl" />
+    <button type="button" (click)="handleOpenLink()">Open Link</button>
+  </div>
+</main>
