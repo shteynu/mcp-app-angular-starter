@@ -88,9 +88,17 @@ push.
 
 ## A larger example
 
-[ngx-json-render](https://github.com/shteynu/ngx-json-render) uses the same
-build step for an MCP App that renders AI-generated UI with Angular Material
-components and runs in Claude and ChatGPT.
+[ngx-json-render](https://github.com/shteynu/ngx-json-render) packages this
+build step as an Angular CLI builder, `ngx-json-render:mcp-app`, which also
+bundles the server into one self-contained `server.mjs`. Its schematic sets up
+a whole MCP App that renders AI-generated UI from your own component catalog
+(or Angular Material's) and runs in Claude and ChatGPT:
+
+```bash
+ng add ngx-json-render
+ng generate ngx-json-render:mcp-app
+ng run mcp-app:mcp
+```
 
 ## Credits
 
